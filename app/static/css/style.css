@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+
+.showcard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+body{
+    background-image: url('../images/pokebackg.jpg');
+    color: rgb(250, 4, 4);
+}
