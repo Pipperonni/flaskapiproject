@@ -17,7 +17,7 @@
         <img src="{{ data['sprites']['front_default'] }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{ data['name'] }}</h5>
-                <p class="card-text">Type: {{ data['types'][0]['type']['name'] }}, {{  data['types'][1]['type']['name']}}<br>
+                <p class="card-text">Type: {{ data['types'][0]['type']['name'] }}, {% if data['types'][1] %} {{  data['types'][1]['type']['name'] }} {% else %}  {% endif %}<br>
                                     Abilities: {{ abilities[0] }}, {{ abilities[1] }} <br>
                                     Stats: <br>
                                     {{ stats[0] }}: {{ base_stat[0] }} <br>

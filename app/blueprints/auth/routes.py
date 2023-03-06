@@ -24,7 +24,7 @@ def register():
             u.hash_password(password)
             u.commit()
             flash(f'Request to register {username} successful')
-            return redirect('/register')
+            return redirect('/')
     return render_template('/register.jinja', form=form)
 
 @auth_bp.route('/sign_in', methods=['GET', 'POST'])

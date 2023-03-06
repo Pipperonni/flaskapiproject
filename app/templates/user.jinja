@@ -2,13 +2,12 @@
 
 {% block content %}
     <h2>{{ user.username }}</h2>
-    {# <div class="showcards"> #}
     {% for cards in collect %}
         
         <a href="{{ url_for('collect.show_card', pokemon=cards.pokemon, username=current_user.username ) }}">{{ cards.pokemon }}</a> <br>
         
     {% endfor %}
-    {# </div> #}
+    
     {% if data  %}
     
         <div class="card ml-50" style="width: 18rem;">
