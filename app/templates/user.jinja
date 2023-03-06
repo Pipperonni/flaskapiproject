@@ -2,20 +2,20 @@
 
 {% block content %}
     <h2>{{ user.username }}</h2>
-    <div class="showcards">
+    {# <div class="showcards"> #}
     {% for cards in collect %}
         
         <a href="{{ url_for('collect.show_card', pokemon=cards.pokemon, username=current_user.username ) }}">{{ cards.pokemon }}</a> <br>
         
     {% endfor %}
-    </div>
+    {# </div> #}
     {% if data  %}
     
         <div class="card ml-50" style="width: 18rem;">
             <img src="{{ data['sprites']['front_default'] }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ data['name'] }}</h5>
-                    <p class="card-text">Type: {{ types['name'] }} <br>
+                    <p class="card-text">Type: {{ types[0] }} {{ types[1]}} <br>
                                         Abilities: {{ abilities[0] }} {{ abilities[1] }} <br>
                                         Stats: <br>
                                         {{ stats[0] }}: {{ base_stat[0] }} <br>
